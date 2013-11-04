@@ -1,0 +1,102 @@
+@import "reset";
+@import "grid";
+
+/*
+  Config
+*/
+$total_width: 100%;
+$container_margin: 0%;
+$gutter_width: 2%;
+$max_width: 960px;
+$padding_standar: 5%;
+$color_yellow: #fff200;
+$color_nearlyblack: #252525;
+$color_nearlynearlyblack: #454545;
+$color_body: #636363;
+$color_headlines: #b7b7b7;
+
+*{
+  outline: none;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  background: #cccccc;
+  min-height: 100%;
+  padding-top: 50px;
+}
+
+.container{
+  width: $total_width;
+  max-width: $max_width;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+header{
+  @include clearfix();
+  @include legacy-pie-clearfix();
+  padding: $padding_standar;
+  img{
+    max-width: 100%;
+  }
+  .logo{
+    width: 170px;
+    height: 170px;
+    border-radius: 170px;
+    background: #bbdb54;
+  }
+}
+
+
+article{
+  width: $total_width;
+  max-width: $max_width;
+  margin: 0 auto;
+  margin-bottom: 80px;
+
+  h3{
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    padding-top: 72px;
+    padding-bottom: 55px;
+    color: $color_headlines;
+  }
+
+  h3.seperator{
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+}
+article{
+  @include container();
+  margin: 0 auto;
+  margin-bottom: $gutter_width;
+  height: 80px;
+}
+
+article div{
+  height: 80px;
+  background: $color_yellow;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  color: $color_nearlynearlyblack;
+  line-height: 80px;
+}
+
+
+@media screen and (min-width: 720px) {
+
+}
+
+@media all and (min-width: 960px) {
+
+}
