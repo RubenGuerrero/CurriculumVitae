@@ -106,9 +106,10 @@ body {
   background: #cccccc;
   min-height: 100%;
   padding-top: 50px;
+  font-family: 'Open Sans';
 }
 
-/* line 32, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .container {
   width: 100%;
   max-width: 960px;
@@ -117,7 +118,7 @@ body {
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-/* line 40, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 header {
   overflow: hidden;
   *zoom: 1;
@@ -133,58 +134,150 @@ header :after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 44, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
+header div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 53, ../sass/main.scss */
+header div.logo {
+  float: left;
+  margin-right: 5%;
+  width: 25%;
+  max-width: 180px;
+}
+/* line 60, ../sass/main.scss */
+header div.content {
+  float: left;
+  width: 70%;
+}
+/* line 65, ../sass/main.scss */
+header h1 {
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 40px;
+  display: inline-block;
+}
+/* line 71, ../sass/main.scss */
+header h1 span {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+}
+/* line 78, ../sass/main.scss */
 header img {
   max-width: 100%;
 }
-/* line 47, ../sass/main.scss */
-header .logo {
-  width: 170px;
-  height: 170px;
-  border-radius: 170px;
-  background: #bbdb54;
+/* line 82, ../sass/main.scss */
+header .personalData span {
+  display: inline-block;
+  line-height: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+/* line 88, ../sass/main.scss */
+header .personalData span text {
+  font-size: 15px;
+  display: block;
+}
+/* line 92, ../sass/main.scss */
+header .personalData span i {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
 }
 
-/* line 56, ../sass/main.scss */
-article {
+/* line 104, ../sass/main.scss */
+nav {
   width: 100%;
   max-width: 960px;
+  display: none;
+  background: #bbdb54;
+  position: fixed;
+  top: 0;
   margin: 0 auto;
-  margin-bottom: 80px;
+  padding: 7px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 40px;
 }
-/* line 62, ../sass/main.scss */
-article h3 {
-  width: 100%;
-  text-align: center;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 38px;
-  padding-top: 72px;
-  padding-bottom: 55px;
-  color: #b7b7b7;
+/* line 117, ../sass/main.scss */
+nav img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
 }
-/* line 73, ../sass/main.scss */
-article h3.seperator {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+/* line 123, ../sass/main.scss */
+nav h2 {
+  font-weight: bold;
+  float: left;
+}
+/* line 127, ../sass/main.scss */
+nav ul {
+  float: right;
+}
+/* line 129, ../sass/main.scss */
+nav ul li {
+  display: inline-block;
+}
+/* line 131, ../sass/main.scss */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  background: #000;
 }
 
-/* line 77, ../sass/main.scss */
-article {
-  width: 100%;
-  margin: 0 0%;
-  margin: 0 auto;
-  margin-bottom: 2%;
-  height: 80px;
+/* line 141, ../sass/main.scss */
+section {
+  overflow: hidden;
+  *zoom: 1;
 }
-
-/* line 84, ../sass/main.scss */
-article div {
-  height: 80px;
-  background: #fff200;
-  font-family: 'Raleway', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-  text-align: center;
-  color: #454545;
-  line-height: 80px;
+/* line 144, ../sass/main.scss */
+section h2 {
+  background: #bbdb54;
+  display: inline-block;
+  padding: 1.5%;
+  font-size: 25px;
+  margin-bottom: 5%;
+}
+/* line 151, ../sass/main.scss */
+section article {
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 3%;
+  padding-right: 40%;
+  line-height: 1.5em;
+}
+/* line 157, ../sass/main.scss */
+section article h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 2% 0;
+}
+/* line 162, ../sass/main.scss */
+section article p {
+  margin: 2% 0;
+}
+/* line 165, ../sass/main.scss */
+section article ul {
+  margin-left: 30px;
+}
+/* line 167, ../sass/main.scss */
+section article ul li {
+  list-style: disc;
+  margin: 1% 0;
+}
+/* line 172, ../sass/main.scss */
+section article strong {
+  font-weight: bold;
 }
