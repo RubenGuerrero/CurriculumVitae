@@ -22,7 +22,15 @@ $color_headlines: #b7b7b7;
 html{
   height: 100%;
 }
-
+a{
+  &, &:link, &:visited{
+    color: #9dbd54;
+    text-decoration: none;
+  }
+  &:active{
+    text-decoration: underline;
+  }
+}
 body{
   background: #cccccc;
   min-height: 100%;
@@ -33,7 +41,7 @@ body{
 .container{
   width: $total_width;
   max-width: $max_width;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   background: #fff;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -89,13 +97,28 @@ header{
         font-size: 15px;
         display: block;
       }
-      i{
-        width: 30px;
-        height: 30px;
-        background: #000;
-        display: inline-block;
+      i.icon{
+        width: 32px;
+        height: 32px;
         vertical-align: middle;
-        margin: 0 5px 0 0;
+        background: url("../images/icons.png") no-repeat top left;
+        display: inline-block;
+
+        &.email{
+          background-position: 0px 0px;
+          margin-right: 10px;
+        }
+        &.house{
+          background-position: 0px -42px;
+        }
+        &.phone{
+          background-position: 0px -84px;
+        }
+      }
+
+      img{
+        vertical-align: middle;
+        margin: 0 10px 0 0;
       }
     }
   }
@@ -109,12 +132,12 @@ nav{
   position: fixed;
   top: 0;
   margin: 0 auto;
-  padding: 7px;
+  //padding: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 40px;
-  img{
+  /*img{
     float: left;
     width: 40px;
     height: 40px;
@@ -128,11 +151,43 @@ nav{
     float: right;
     li{
       display: inline-block;
+      margin: 0 6px 0 0;
+      &:last-child{
+        margin-right: 0;
+      }
       a{
         color: #fff;
         text-decoration: none;
-        padding: 0 10px;
+        padding: 7px 10px;
         background: #000;
+      }
+    }
+  }*/
+  padding: 5px;
+  .info{
+    @include clearfix();
+  }
+  img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 0;
+  }
+  h2{
+    font-weight: bold;
+  }
+  ul{
+    display: none;
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+    li{
+      display: block;
+      border-bottom: 1px solid #98b749;
+      &:first-child{
+        border-top: 1px solid #98b749;
+      }
+      a{
+        color: #000 !important;
       }
     }
   }
@@ -173,6 +228,10 @@ section{
       font-weight: bold;
     }
   }
+}
+
+section.education{
+  background: url("../images/education_bg.png") no-repeat right 50px;
 }
 
 @media screen and (min-width: 720px) {
