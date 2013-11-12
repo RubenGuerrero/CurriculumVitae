@@ -59,29 +59,47 @@ header{
 
   }
   div.logo{
-    float: left;
+    /*float: left;
     margin-right: 5%;
     width: 25%;
-    max-width: 180px;
+    max-width: 180px;*/
+    img{
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   div.content{
-    float: left;
-    width: 70%;
+    /*float: left;
+    width: 70%;*/
   }
 
   h1{
     padding-top: 20px;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 200;
     line-height: 40px;
-    display: inline-block;
+    display: block;
+    text-align: center;
     span{
       display: block;
-      text-align: right;
+      text-align: center;
       font-style: italic;
       font-size: 20px;
     }
+  }
+  p.deal{
+    width: 80%;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 15px auto;
+    font-style: italic;
+    color: #6f6f6f;
+  }
+  p.info{
+    text-align: center;
+    font-size: 12px;
   }
   img{
     max-width: 100%;
@@ -130,6 +148,7 @@ nav{
   display: none;
   background: #bbdb54; //rgba(226,226,226, 0.9);
   position: fixed;
+  z-index: 999;
   top: 0;
   margin: 0 auto;
   //padding: 20px;
@@ -175,6 +194,15 @@ nav{
   }
   h2{
     font-weight: bold;
+    float: left;
+  }
+  .menu-show{
+    background: url("../images/menu.png") no-repeat top left;
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: right;
+    margin: 7px 7px 0 0;
   }
   ul{
     display: none;
@@ -188,6 +216,9 @@ nav{
       }
       a{
         color: #000 !important;
+        &.selected{
+          background: red;
+        }
       }
     }
   }
@@ -207,7 +238,7 @@ section{
     padding: $padding_standar;
     padding-top: 0;
     padding-bottom: 3%;
-    padding-right: 40%;
+    //padding-right: 40%;
     line-height: 1.5em;
     h3{
       font-weight: bold;
@@ -229,12 +260,178 @@ section{
     }
   }
 }
-
 section.education{
-  background: url("../images/education_bg.png") no-repeat right 50px;
+  ul{
+    li{
+      span.sub{
+        font-size: 15px;
+        display: block;
+        font-weight: normal;
+        color: #a7a9ac;
+        font-style: italic;
+      }
+    }
+  }
+}
+section.experience{
+  span.sub{
+    display: block;
+    font-weight: normal;
+    color: #a7a9ac;
+    font-style: italic;
+  }
+}
+
+section.skills{
+  ul.skillslist{
+    margin: 0;
+    li{
+      list-style: none;
+      font-size: 20px;
+      margin-bottom: 20px;
+      .sub{
+        display: block;
+        font-weight: normal;
+        color: #a7a9ac;
+        font-style: italic;
+        font-size: 13px;
+      }
+    }
+  }
+  .skill{
+    margin-top: 5px;
+    height: 5px;
+    width: 0;
+    &.html{
+      background: #e44d26;
+      width: 100%;
+    }
+    &.css{
+      background: #2277ff;
+      width: 100%;
+    }
+    &.sass{
+      background: #c6538c;
+      width: 95%;
+    }
+    &.js{
+      background: #f0db4f;
+      width: 100%;
+    }
+    &.responsive{
+      background: #b3b3b3;
+      width: 90%;
+    }
+    &.libraries{
+      background: #b3b3b3;
+      width: 90%;
+    }
+    &.ajax{
+      background: #0173bc;
+      width: 95%;
+    }
+
+  }
+}
+
+section.works{
+  ul{
+    li{
+      a{
+        color: #98b749;
+      }
+      span{
+        display: block;
+        margin-top: 5px;
+      }
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @media screen and (min-width: 720px) {
+  section{
+    article{
+      padding-right: 40%;
+    }
+  }
+  section.education{
+    background: url("../images/education_bg.png") no-repeat right 50px;
+  }
+
+  section.experience{
+    article{
+      position: relative;
+      background: url("../images/exp-bg.png") repeat-y;
+      background-position: 75%;
+      &.last{
+        background: url("../images/exp-bg-bottom.png") no-repeat;
+        background-position: 75% 0;
+      }
+    }
+    span.sub{
+      display: none;
+    }
+    span.subdesk{
+      background: #eaeaea;
+      width: 70px;
+      height: 70px;
+      border-radius: 70px;
+      -webkit-border-radius: 70px;
+      -moz-border-radius: 70px;
+      text-align: center;
+      position: absolute;
+      display: block;
+      top: -30px;
+      left: 71%;
+      color: #000;
+      font-weight: bold;
+      text{
+        display: block;
+        line-height: 20px;
+        &:first-child{
+          margin-top: 15px;
+        }
+        &.big{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  section.skills{
+    background: url("../images/skills-bg.png") no-repeat right 100px;
+  }
+
+  nav{
+    .menu-show{
+      display: none !important;
+    }
+    .info{
+      float: left;
+    }
+    ul{
+      border: none;
+      display: block !important;
+      float: right;
+      margin: 0 7px 0 0;
+      padding: 0;
+      li{
+        border: none;
+        display: inline-block;
+        margin-left: 10px;
+        &:first-child{
+          border: none;
+          margin-left: 0;
+        }
+        a{
+          background: #8eae50;
+          color: #fff !important;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
 
 }
 

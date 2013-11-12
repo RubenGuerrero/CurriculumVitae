@@ -152,36 +152,57 @@ header div {
 }
 /* line 61, ../sass/main.scss */
 header div.logo {
-  float: left;
+  /*float: left;
   margin-right: 5%;
   width: 25%;
-  max-width: 180px;
+  max-width: 180px;*/
 }
-/* line 68, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
+header div.logo img {
+  margin: 0 auto;
+  display: block;
+}
+/* line 72, ../sass/main.scss */
 header div.content {
-  float: left;
-  width: 70%;
+  /*float: left;
+  width: 70%;*/
 }
-/* line 73, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 header h1 {
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 200;
   line-height: 40px;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
-/* line 79, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 header h1 span {
   display: block;
-  text-align: right;
+  text-align: center;
   font-style: italic;
   font-size: 20px;
 }
-/* line 86, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
+header p.deal {
+  width: 80%;
+  font-size: 20px;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 15px auto;
+  font-style: italic;
+  color: #6f6f6f;
+}
+/* line 100, ../sass/main.scss */
+header p.info {
+  text-align: center;
+  font-size: 12px;
+}
+/* line 104, ../sass/main.scss */
 header img {
   max-width: 100%;
 }
-/* line 90, ../sass/main.scss */
+/* line 108, ../sass/main.scss */
 header .personalData span {
   display: inline-block;
   line-height: 30px;
@@ -189,12 +210,12 @@ header .personalData span {
   margin-bottom: 20px;
   font-size: 20px;
 }
-/* line 96, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 header .personalData span text {
   font-size: 15px;
   display: block;
 }
-/* line 100, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 header .personalData span i.icon {
   width: 32px;
   height: 32px;
@@ -202,32 +223,33 @@ header .personalData span i.icon {
   background: url("../images/icons.png") no-repeat top left;
   display: inline-block;
 }
-/* line 107, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 header .personalData span i.icon.email {
   background-position: 0px 0px;
   margin-right: 10px;
 }
-/* line 111, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 header .personalData span i.icon.house {
   background-position: 0px -42px;
 }
-/* line 114, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 header .personalData span i.icon.phone {
   background-position: 0px -84px;
 }
-/* line 119, ../sass/main.scss */
+/* line 137, ../sass/main.scss */
 header .personalData span img {
   vertical-align: middle;
   margin: 0 10px 0 0;
 }
 
-/* line 127, ../sass/main.scss */
+/* line 145, ../sass/main.scss */
 nav {
   width: 100%;
   max-width: 960px;
   display: none;
   background: #bbdb54;
   position: fixed;
+  z-index: 999;
   top: 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -262,48 +284,62 @@ nav {
   }*/
   padding: 5px;
 }
-/* line 167, ../sass/main.scss */
+/* line 186, ../sass/main.scss */
 nav .info {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 170, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 nav img {
   float: left;
   width: 40px;
   height: 40px;
   margin: 0 10px 0 0;
 }
-/* line 176, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 nav h2 {
   font-weight: bold;
+  float: left;
 }
-/* line 179, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
+nav .menu-show {
+  background: url("../images/menu.png") no-repeat top left;
+  width: 25px;
+  height: 25px;
+  display: block;
+  float: right;
+  margin: 7px 7px 0 0;
+}
+/* line 207, ../sass/main.scss */
 nav ul {
   display: none;
   margin-top: 10px;
   padding: 0 10px 10px 10px;
 }
-/* line 183, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 nav ul li {
   display: block;
   border-bottom: 1px solid #98b749;
 }
-/* line 186, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 nav ul li:first-child {
   border-top: 1px solid #98b749;
 }
-/* line 189, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
 nav ul li a {
   color: #000 !important;
 }
+/* line 219, ../sass/main.scss */
+nav ul li a.selected {
+  background: red;
+}
 
-/* line 196, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 section {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 199, ../sass/main.scss */
+/* line 230, ../sass/main.scss */
 section h2 {
   background: #bbdb54;
   display: inline-block;
@@ -311,39 +347,220 @@ section h2 {
   font-size: 25px;
   margin-bottom: 5%;
 }
-/* line 206, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 section article {
   padding: 5%;
   padding-top: 0;
   padding-bottom: 3%;
-  padding-right: 40%;
   line-height: 1.5em;
 }
-/* line 212, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 section article h3 {
   font-weight: bold;
   font-size: 20px;
   margin: 0 0 2% 0;
 }
-/* line 217, ../sass/main.scss */
+/* line 248, ../sass/main.scss */
 section article p {
   margin: 2% 0;
 }
-/* line 220, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 section article ul {
   margin-left: 30px;
 }
-/* line 222, ../sass/main.scss */
+/* line 253, ../sass/main.scss */
 section article ul li {
   list-style: disc;
   margin: 1% 0;
 }
-/* line 227, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 section article strong {
   font-weight: bold;
 }
 
-/* line 233, ../sass/main.scss */
-section.education {
-  background: url("../images/education_bg.png") no-repeat right 50px;
+/* line 266, ../sass/main.scss */
+section.education ul li span.sub {
+  font-size: 15px;
+  display: block;
+  font-weight: normal;
+  color: #a7a9ac;
+  font-style: italic;
+}
+
+/* line 277, ../sass/main.scss */
+section.experience span.sub {
+  display: block;
+  font-weight: normal;
+  color: #a7a9ac;
+  font-style: italic;
+}
+
+/* line 286, ../sass/main.scss */
+section.skills ul.skillslist {
+  margin: 0;
+}
+/* line 288, ../sass/main.scss */
+section.skills ul.skillslist li {
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+/* line 292, ../sass/main.scss */
+section.skills ul.skillslist li .sub {
+  display: block;
+  font-weight: normal;
+  color: #a7a9ac;
+  font-style: italic;
+  font-size: 13px;
+}
+/* line 301, ../sass/main.scss */
+section.skills .skill {
+  margin-top: 5px;
+  height: 5px;
+  width: 0;
+}
+/* line 305, ../sass/main.scss */
+section.skills .skill.html {
+  background: #e44d26;
+  width: 100%;
+}
+/* line 309, ../sass/main.scss */
+section.skills .skill.css {
+  background: #2277ff;
+  width: 100%;
+}
+/* line 313, ../sass/main.scss */
+section.skills .skill.sass {
+  background: #c6538c;
+  width: 95%;
+}
+/* line 317, ../sass/main.scss */
+section.skills .skill.js {
+  background: #f0db4f;
+  width: 100%;
+}
+/* line 321, ../sass/main.scss */
+section.skills .skill.responsive {
+  background: #b3b3b3;
+  width: 90%;
+}
+/* line 325, ../sass/main.scss */
+section.skills .skill.libraries {
+  background: #b3b3b3;
+  width: 90%;
+}
+/* line 329, ../sass/main.scss */
+section.skills .skill.ajax {
+  background: #0173bc;
+  width: 95%;
+}
+
+/* line 339, ../sass/main.scss */
+section.works ul li {
+  margin-bottom: 10px;
+}
+/* line 340, ../sass/main.scss */
+section.works ul li a {
+  color: #98b749;
+}
+/* line 343, ../sass/main.scss */
+section.works ul li span {
+  display: block;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 720px) {
+  /* line 354, ../sass/main.scss */
+  section article {
+    padding-right: 40%;
+  }
+
+  /* line 358, ../sass/main.scss */
+  section.education {
+    background: url("../images/education_bg.png") no-repeat right 50px;
+  }
+
+  /* line 363, ../sass/main.scss */
+  section.experience article {
+    position: relative;
+    background: url("../images/exp-bg.png") repeat-y;
+    background-position: 75%;
+  }
+  /* line 367, ../sass/main.scss */
+  section.experience article.last {
+    background: url("../images/exp-bg-bottom.png") no-repeat;
+    background-position: 75% 0;
+  }
+  /* line 372, ../sass/main.scss */
+  section.experience span.sub {
+    display: none;
+  }
+  /* line 375, ../sass/main.scss */
+  section.experience span.subdesk {
+    background: #eaeaea;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: -30px;
+    left: 71%;
+    color: #000;
+    font-weight: bold;
+  }
+  /* line 389, ../sass/main.scss */
+  section.experience span.subdesk text {
+    display: block;
+    line-height: 20px;
+  }
+  /* line 392, ../sass/main.scss */
+  section.experience span.subdesk text:first-child {
+    margin-top: 15px;
+  }
+  /* line 395, ../sass/main.scss */
+  section.experience span.subdesk text.big {
+    font-size: 13px;
+  }
+
+  /* line 402, ../sass/main.scss */
+  section.skills {
+    background: url("../images/skills-bg.png") no-repeat right 100px;
+  }
+
+  /* line 407, ../sass/main.scss */
+  nav .menu-show {
+    display: none !important;
+  }
+  /* line 410, ../sass/main.scss */
+  nav .info {
+    float: left;
+  }
+  /* line 413, ../sass/main.scss */
+  nav ul {
+    border: none;
+    display: block !important;
+    float: right;
+    margin: 0 7px 0 0;
+    padding: 0;
+  }
+  /* line 419, ../sass/main.scss */
+  nav ul li {
+    border: none;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  /* line 423, ../sass/main.scss */
+  nav ul li:first-child {
+    border: none;
+    margin-left: 0;
+  }
+  /* line 427, ../sass/main.scss */
+  nav ul li a {
+    background: #8eae50;
+    color: #fff !important;
+    padding: 5px 10px;
+  }
 }
